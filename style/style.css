@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    height: 10vh;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    position: absolute;
+    position: sticky;
+    background: black;
+    color: white;
+}
+
+.container-nav{
+    height: 10vh;
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.logo{
+}
+.logo h1{
+    margin: auto;
+    padding: 0.25em;
+}
+
+nav{
+    margin-left: auto;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+}
+nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+}
+nav li{
+
+}
+nav a{
+    color: white;
+    padding: 1em;
+}
+nav
+a:hover,
+a:active{
+    border-bottom: 2px solid white;
+}
+
+.container{
+    background-image: url(../static/background.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+}
+/* Home */
+.row{
+    position: absolute;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 30vh;
+}
+
+.heading{
+    border-radius: 0.5em;
+    color: black;
+    width: 90%;
+    max-width: 1080px;
+    margin: auto;
+    background: white;
+    padding: 1.5em;
+}
+
+.heading h1{
+    font-size: 4rem;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.heading button{
+    width: 35%;
+    background: chocolate;
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 1.5rem;
+}
+
+/* info */
+
+.info{
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 2em;
+}
+.sub-info{
+    width: 90%;
+    max-width: 1080px;
+    padding: 2em;
+}
+
+
+
+/* About */
+
+.about{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background: rgb(95, 57, 30);
+    text-align: center;
+    color: white;
+}
+
+.about h1{
+    padding-top: 2em;
+    font-size: 2rem;
+}
+.roww{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 2em;
+}
+.col{
+    background: black;
+    width: 20%;
+    padding: 2em;
+    margin:2em auto;
+    border-radius: 0.5em;
+}
+
+.col button{
+    width: 90%;
+    background: chocolate;
+    padding: 0.5em;
+    margin: 0.5em auto;
+    font-size: 1rem;
+    border-radius: 0.5em;
+}
+
+.col img {
+    width: 75%;
+}
+
+
+/* Contact */
+
+.contact{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 2em;
+    background: gray;
+}
+
+.contact h1{
+    padding-top: 2em;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 1em;
+    width: 90%;
+    max-width: 600px;
+}
+form input{
+    border-radius: 0.5em;
+    width: 90%;
+    padding: 1em;
+    margin: 1em auto;
+}
+form button{
+    background: chocolate;
+    padding: 1em;
+    margin: 1em auto;
+    width: 50%;
+    border-radius: 0.5em;
+    font-size: 1rem;
+}
+
+/* footer */
+
+footer{
+    margin: auto;
+    background: black;
+}
+
+.row2{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 2em;
+}
+
+.col2{
+    background: gray;
+    color: black;
+    width: 20%;
+    padding: 2em;
+    margin:2em auto;
+    border-radius: 0.5em;
+}
+
+
+
+
+@media (max-width:1080px){
+
+    .container-nav{
+        flex-direction: column;
+    }
+    .logo{
+        justify-content: space-between;
+        z-index: 3;
+    }
+    .logo h1{
+        height: 100%;
+        padding: 0.45em 0;
+    }
+    nav{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .navlinks{
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 90vh;
+        background:black;
+        transition: all 0.25s ease;
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .navlinks.open{
+        padding: 2em;
+        margin-top: -1em;
+        display: flex;
+        flex-direction: column;
+        display: absolute;
+        pointer-events: all;
+        background: black;
+        z-index: 1;
+        opacity: 1;
+        pointer-events: all;
+        position: absolute;
+    }
+    .nav-links{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 30%;
+    }
+
+
+    /* home */
+
+    .container{
+        height: 100vh;
+    }
+
+    .heading{
+        height: 100%;
+    }
+    .heading h1{
+    font-size: 2rem;
+    padding: 0.5em;
+    width: 100%;
+    }
+    .heading button{
+    width: 60%;
+    background: chocolate;
+    font-size: 1rem;
+    }
+
+    .about{
+        padding: 0;
+    }
+    .roww{
+        display: flex;
+        flex-direction: column;
+    }
+    .col{
+        width: 90%;
+    }
+
+    /* contact */
+
+    .contact{
+        padding: 0;
+    }
+
+    /* footer */
+    footer{
+        padding: 0;
+    }
+    .row2{
+        display: flex;
+        flex-direction: column;
+    }
+    .col2{
+        width: 90%;
+    }
+}
